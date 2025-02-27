@@ -7,7 +7,7 @@
 	const dispatch = createEventDispatcher();
 
 	import {
-		type Model,
+		type Model2,
 		mobile,
 		settings,
 		showSidebar,
@@ -95,7 +95,7 @@
 
 	let user = null;
 	export let placeholder = '';
-
+	
 	let visionCapableModels = [];
 	$: visionCapableModels = [...(atSelectedModel ? [atSelectedModel] : selectedModels)].filter(
 		(model) => $models.find((m) => m.id === model)?.info?.meta?.capabilities?.vision ?? true
